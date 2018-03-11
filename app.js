@@ -21,14 +21,14 @@ require('./api/config/passport');
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Routes
-app.use('/api', routesApi);
-
 // uncomment after placing your favicon in /public
 app.use(logger('dev'));
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 app.use(cookieParser());
+
+// Routes
+app.use('/api', routesApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

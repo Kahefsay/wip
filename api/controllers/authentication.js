@@ -1,7 +1,10 @@
 let passport = require('passport');
+let User = require('../models/user');
 
 module.exports.register = function(req, res) {
-    console.log(userSchema);
+
+    console.log(req.body);
+    
     res.status(200);
     res.json( {ok: 'ok'} );
     // user.setPassword(req.body.password);
